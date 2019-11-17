@@ -1,0 +1,42 @@
+{
+    "packages": [
+        {
+            "name": "Legion2",
+            "maintainer": "Leon Kiefer",
+            "websiteURL": "https://github.com/Legion2/CorsairLightingProtocol",
+            "email": "",
+            "platforms": [
+                {
+                    "name": "Corsair Lighting Protocol Boards",
+                    "architecture": "avr",
+                    "version": "0.1.0",
+                    "category": "Contributed",
+                    "help": {
+                        "online": "https://github.com/Legion2/CorsairLightingProtocolBoards"
+                    },
+                    "url": "https://github.com/Legion2/CorsairLightingProtocolBoards/releases/download/v0.1.0/CorsairLightingProtocolBoards.zip",
+                    "archiveFileName": "CorsairLightingProtocolBoards.zip",
+                    "checksum": "SHA-256:26da9d10099262db4b5ce74832adbe01128ee8ae3277b50590cd39e0926a3e97",
+                    "size": "1307",
+                    "boards": [
+                        {
+                            "name": "Lighting Node PRO (SparkFun Pro Micro)"
+                        }
+                    ],
+                    "toolsDependencies": [
+                        {
+                            "packager": "arduino",
+                            "name": "avr-gcc",
+                            "version": "4.8.1-arduino5"
+                        },
+                        {
+                            "packager": "arduino",
+                            "name": "avrdude",
+                            "version": "6.0.1-arduino5"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
