@@ -25,7 +25,6 @@ promicroclp.build.extra_flags={build.usb_flags}
 promicroclp.menu.cpu.8MHzatmega32U4=ATmega32U4 (3.3V, 8 MHz)
 
 promicroclp.menu.cpu.8MHzatmega32U4.build.pid.0=0x0c0b
-promicroclp.menu.cpu.8MHzatmega32U4.build.pid.1=0x0c0b
 promicroclp.menu.cpu.8MHzatmega32U4.build.pid=0x0c0b
 promicroclp.menu.cpu.8MHzatmega32U4.build.f_cpu=8000000L
 
@@ -33,6 +32,40 @@ promicroclp.menu.cpu.8MHzatmega32U4.build.f_cpu=8000000L
 promicroclp.menu.cpu.16MHzatmega32U4=ATmega32U4 (5V, 16 MHz)
 
 promicroclp.menu.cpu.16MHzatmega32U4.build.pid.0=0x0c0b
-promicroclp.menu.cpu.16MHzatmega32U4.build.pid.1=0x0c0b
 promicroclp.menu.cpu.16MHzatmega32U4.build.pid=0x0c0b
 promicroclp.menu.cpu.16MHzatmega32U4.build.f_cpu=16000000L
+
+################################################################################
+################################ HoodLoader2 16u2 ##############################
+################################################################################
+
+HoodLoader2atmega16u2clp.name=Lighting Node PRO (HoodLoader2 16u2)
+HoodLoader2atmega16u2clp.build.core=arduino:arduino
+HoodLoader2atmega16u2clp.bootloader.tool=arduino:avrdude
+HoodLoader2atmega16u2clp.upload.tool=arduino:avrdude
+
+# MCU properties
+HoodLoader2atmega16u2clp.upload.maximum_size=12288
+HoodLoader2atmega16u2clp.upload.maximum_data_size=512
+HoodLoader2atmega16u2clp.build.mcu=atmega16u2
+
+#general settings for all boards:
+HoodLoader2atmega16u2clp.build.variant=HoodLoader2:HoodLoader2
+HoodLoader2atmega16u2clp.build.board=HOODLOADER2
+HoodLoader2atmega16u2clp.build.f_cpu=16000000L
+HoodLoader2atmega16u2clp.vid.0=0x1b1c
+HoodLoader2atmega16u2clp.pid.0=0x0c0b
+
+#uploading settings
+HoodLoader2atmega16u2clp.upload.speed=57600
+HoodLoader2atmega16u2clp.upload.protocol=avr109
+HoodLoader2atmega16u2clp.upload.disable_flushing=true
+HoodLoader2atmega16u2clp.upload.use_1200bps_touch=true
+HoodLoader2atmega16u2clp.upload.wait_for_upload_port=true
+
+#usb settings, manufacturer overwritten by the IDE because of the VID
+HoodLoader2atmega16u2clp.build.vid=0x1b1c
+HoodLoader2atmega16u2clp.build.pid=0x0c0b
+HoodLoader2atmega16u2clp.build.usb_product="Lighting Node PRO"
+HoodLoader2atmega16u2clp.build.usb_manufacturer="Corsair"
+HoodLoader2atmega16u2clp.build.extra_flags={build.usb_flags} -DMAGIC_KEY_POS=(RAMEND-1) -DUSB_EP_SIZE=16
