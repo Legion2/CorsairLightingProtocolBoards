@@ -1,0 +1,2 @@
+name=Corsair Lighting Protocol Boards
+version=0.1.0

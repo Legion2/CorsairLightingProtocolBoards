@@ -1,0 +1,52 @@
+################################################################################
+################################## Pro Micro ###################################
+################################################################################
+promicroclp.name=Lighting Node PRO (SparkFun Pro Micro)
+
+promicroclp.upload.tool=avrdude
+promicroclp.upload.protocol=avr109
+promicroclp.upload.maximum_size=28672
+promicroclp.upload.maximum_data_size=2560
+promicroclp.upload.speed=57600
+promicroclp.upload.disable_flushing=true
+promicroclp.upload.use_1200bps_touch=true
+promicroclp.upload.wait_for_upload_port=true
+
+promicroclp.bootloader.tool=avrdude
+promicroclp.bootloader.unlock_bits=0x3F
+promicroclp.bootloader.lock_bits=0x2F
+promicroclp.bootloader.low_fuses=0xFF
+promicroclp.bootloader.high_fuses=0xD8
+
+promicroclp.build.board=AVR_PROMICRO
+promicroclp.build.core=arduino:arduino
+promicroclp.build.variant=promicro
+promicroclp.build.mcu=atmega32u4
+promicroclp.build.usb_product="Lighting Node PRO"
+promicroclp.build.usb_manufacturer="Corsair"
+promicroclp.build.vid=0x1b1c
+promicroclp.build.extra_flags={build.usb_flags}
+
+
+######################### Pro Micro 3.3V / 8MHz ################################
+promicroclp.menu.cpu.8MHzatmega32U4=ATmega32U4 (3.3V, 8 MHz)
+
+promicroclp.menu.cpu.8MHzatmega32U4.build.pid.0=0x0c0b
+promicroclp.menu.cpu.8MHzatmega32U4.build.pid.1=0x0c0b
+promicroclp.menu.cpu.8MHzatmega32U4.build.pid=0x0c0b
+promicroclp.menu.cpu.8MHzatmega32U4.build.f_cpu=8000000L
+
+promicroclp.menu.cpu.8MHzatmega32U4.bootloader.extended_fuses=0xFE
+promicroclp.menu.cpu.8MHzatmega32U4.bootloader.file=caterina/Caterina-promicro8.hex
+
+
+############################# Pro Micro 5V / 16MHz #############################
+promicroclp.menu.cpu.16MHzatmega32U4=ATmega32U4 (5V, 16 MHz)
+
+promicroclp.menu.cpu.16MHzatmega32U4.build.pid.0=0x0c0b
+promicroclp.menu.cpu.16MHzatmega32U4.build.pid.1=0x0c0b
+promicroclp.menu.cpu.16MHzatmega32U4.build.pid=0x0c0b
+promicroclp.menu.cpu.16MHzatmega32U4.build.f_cpu=16000000L
+
+promicroclp.menu.cpu.16MHzatmega32U4.bootloader.extended_fuses=0xCB
+promicroclp.menu.cpu.16MHzatmega32U4.bootloader.file=caterina/Caterina-promicro16.hex
