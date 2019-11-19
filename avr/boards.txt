@@ -1,45 +1,85 @@
+menu.device=Device
+
 ################################################################################
-################################## Pro Micro ###################################
+################################# Pro Micro 5V #################################
 ################################################################################
-promicroclp.name=Lighting Node PRO (SparkFun Pro Micro)
+promicro5vclp.name=CLP SparkFun Pro Micro 5V, 16 MHz
 
-promicroclp.upload.tool=avrdude
-promicroclp.upload.protocol=avr109
-promicroclp.upload.maximum_size=28672
-promicroclp.upload.maximum_data_size=2560
-promicroclp.upload.speed=57600
-promicroclp.upload.disable_flushing=true
-promicroclp.upload.use_1200bps_touch=true
-promicroclp.upload.wait_for_upload_port=true
+promicro5vclp.upload.tool=SparkFun:avrdude
+promicro5vclp.upload.protocol=avr109
+promicro5vclp.upload.maximum_size=28672
+promicro5vclp.upload.maximum_data_size=2560
+promicro5vclp.upload.speed=57600
+promicro5vclp.upload.disable_flushing=true
+promicro5vclp.upload.use_1200bps_touch=true
+promicro5vclp.upload.wait_for_upload_port=true
 
-promicroclp.build.board=AVR_PROMICRO
-promicroclp.build.core=arduino:arduino
-promicroclp.build.variant=SparkFun:promicro
-promicroclp.build.mcu=atmega32u4
-promicroclp.build.usb_product="Lighting Node PRO"
-promicroclp.build.usb_manufacturer="Corsair"
-promicroclp.build.vid=0x1b1c
-promicroclp.build.extra_flags={build.usb_flags}
+promicro5vclp.build.board=AVR_PROMICRO
+promicro5vclp.build.core=arduino:arduino
+promicro5vclp.build.variant=SparkFun:promicro
+promicro5vclp.build.mcu=atmega32u4
+promicro5vclp.build.f_cpu=16000000L
+promicro5vclp.build.usb_manufacturer="Corsair"
+promicro5vclp.build.vid=0x1b1c
+promicro5vclp.build.extra_flags={build.usb_flags}
 
-######################### Pro Micro 3.3V / 8MHz ################################
-promicroclp.menu.cpu.8MHzatmega32U4=ATmega32U4 (3.3V, 8 MHz)
+# devices
+promicro5vclp.menu.device.lnp=Lighting Node PRO
+promicro5vclp.menu.device.lnp.build.pid=0x0c0b
+promicro5vclp.menu.device.lnp.build.usb_product="Lighting Node PRO"
+promicro5vclp.menu.device.cp=Commander PRO
+promicro5vclp.menu.device.cp.build.pid=0x0c10
+promicro5vclp.menu.device.cp.build.usb_product="Commander PRO"
+promicro5vclp.menu.device.lnc=Lighting Node CORE
+promicro5vclp.menu.device.lnc.build.pid=0x0c1a
+promicro5vclp.menu.device.lnc.build.usb_product="Lighting Node CORE"
+promicro5vclp.menu.device.slc=Smart Lighting Controller
+promicro5vclp.menu.device.slc.build.pid=0x0c1e
+promicro5vclp.menu.device.slc.build.usb_product="Smart Lighting Controller"
 
-promicroclp.menu.cpu.8MHzatmega32U4.build.pid.0=0x0c0b
-promicroclp.menu.cpu.8MHzatmega32U4.build.pid=0x0c0b
-promicroclp.menu.cpu.8MHzatmega32U4.build.f_cpu=8000000L
 
-############################# Pro Micro 5V / 16MHz #############################
-promicroclp.menu.cpu.16MHzatmega32U4=ATmega32U4 (5V, 16 MHz)
+################################################################################
+################################ Pro Micro 3.3V ################################
+################################################################################
+promicro3vclp.name=CLP SparkFun Pro Micro 3.3V, 8 MHz
 
-promicroclp.menu.cpu.16MHzatmega32U4.build.pid.0=0x0c0b
-promicroclp.menu.cpu.16MHzatmega32U4.build.pid=0x0c0b
-promicroclp.menu.cpu.16MHzatmega32U4.build.f_cpu=16000000L
+promicro3vclp.upload.tool=SparkFun:avrdude
+promicro3vclp.upload.protocol=avr109
+promicro3vclp.upload.maximum_size=28672
+promicro3vclp.upload.maximum_data_size=2560
+promicro3vclp.upload.speed=57600
+promicro3vclp.upload.disable_flushing=true
+promicro3vclp.upload.use_1200bps_touch=true
+promicro3vclp.upload.wait_for_upload_port=true
+
+promicro3vclp.build.board=AVR_PROMICRO
+promicro3vclp.build.core=arduino:arduino
+promicro3vclp.build.variant=SparkFun:promicro
+promicro3vclp.build.mcu=atmega32u4
+promicro3vclp.cpu.build.f_cpu=8000000L
+promicro3vclp.build.usb_manufacturer="Corsair"
+promicro3vclp.build.vid=0x1b1c
+promicro3vclp.build.extra_flags={build.usb_flags}
+
+# devices
+promicro3vclp.menu.device.lnp=Lighting Node PRO
+promicro3vclp.menu.device.lnp.build.pid=0x0c0b
+promicro3vclp.menu.device.lnp.build.usb_product="Lighting Node PRO"
+promicro3vclp.menu.device.cp=Commander PRO
+promicro3vclp.menu.device.cp.build.pid=0x0c10
+promicro3vclp.menu.device.cp.build.usb_product="Commander PRO"
+promicro3vclp.menu.device.lnc=Lighting Node CORE
+promicro3vclp.menu.device.lnc.build.pid=0x0c1a
+promicro3vclp.menu.device.lnc.build.usb_product="Lighting Node CORE"
+promicro3vclp.menu.device.slc=Smart Lighting Controller
+promicro3vclp.menu.device.slc.build.pid=0x0c1e
+promicro3vclp.menu.device.slc.build.usb_product="Smart Lighting Controller"
 
 ################################################################################
 ################################ HoodLoader2 16u2 ##############################
 ################################################################################
 
-HoodLoader2atmega16u2clp.name=Lighting Node PRO (HoodLoader2 16u2)
+HoodLoader2atmega16u2clp.name=CLP HoodLoader2 16u2
 HoodLoader2atmega16u2clp.build.core=arduino:arduino
 HoodLoader2atmega16u2clp.bootloader.tool=arduino:avrdude
 HoodLoader2atmega16u2clp.upload.tool=arduino:avrdude
@@ -53,8 +93,6 @@ HoodLoader2atmega16u2clp.build.mcu=atmega16u2
 HoodLoader2atmega16u2clp.build.variant=HoodLoader2:HoodLoader2
 HoodLoader2atmega16u2clp.build.board=HOODLOADER2
 HoodLoader2atmega16u2clp.build.f_cpu=16000000L
-HoodLoader2atmega16u2clp.vid.0=0x1b1c
-HoodLoader2atmega16u2clp.pid.0=0x0c0b
 
 #uploading settings
 HoodLoader2atmega16u2clp.upload.speed=57600
@@ -65,7 +103,57 @@ HoodLoader2atmega16u2clp.upload.wait_for_upload_port=true
 
 #usb settings, manufacturer overwritten by the IDE because of the VID
 HoodLoader2atmega16u2clp.build.vid=0x1b1c
-HoodLoader2atmega16u2clp.build.pid=0x0c0b
-HoodLoader2atmega16u2clp.build.usb_product="Lighting Node PRO"
 HoodLoader2atmega16u2clp.build.usb_manufacturer="Corsair"
 HoodLoader2atmega16u2clp.build.extra_flags={build.usb_flags} -DMAGIC_KEY_POS=(RAMEND-1) -DUSB_EP_SIZE=16
+
+# devices
+HoodLoader2atmega16u2clp.menu.device.lnp=Lighting Node PRO
+HoodLoader2atmega16u2clp.menu.device.lnp.build.pid=0x0c0b
+HoodLoader2atmega16u2clp.menu.device.lnp.build.usb_product="Lighting Node PRO"
+HoodLoader2atmega16u2clp.menu.device.cp=Commander PRO
+HoodLoader2atmega16u2clp.menu.device.cp.build.pid=0x0c10
+HoodLoader2atmega16u2clp.menu.device.cp.build.usb_product="Commander PRO"
+HoodLoader2atmega16u2clp.menu.device.lnc=Lighting Node CORE
+HoodLoader2atmega16u2clp.menu.device.lnc.build.pid=0x0c1a
+HoodLoader2atmega16u2clp.menu.device.lnc.build.usb_product="Lighting Node CORE"
+HoodLoader2atmega16u2clp.menu.device.slc=Smart Lighting Controller
+HoodLoader2atmega16u2clp.menu.device.slc.build.pid=0x0c1e
+HoodLoader2atmega16u2clp.menu.device.slc.build.usb_product="Smart Lighting Controller"
+
+################################################################################
+################################ Arduino Leonardo ##############################
+################################################################################
+
+leonardoclp.name=CLP Arduino Leonardo
+
+leonardoclp.upload.tool=arduino:avrdude
+leonardoclp.upload.protocol=avr109
+leonardoclp.upload.maximum_size=28672
+leonardoclp.upload.maximum_data_size=2560
+leonardoclp.upload.speed=57600
+leonardoclp.upload.disable_flushing=true
+leonardoclp.upload.use_1200bps_touch=true
+leonardoclp.upload.wait_for_upload_port=true
+
+leonardoclp.build.mcu=atmega32u4
+leonardoclp.build.f_cpu=16000000L
+leonardoclp.build.vid=0x1b1c
+leonardoclp.build.usb_product="Corsair"
+leonardoclp.build.board=AVR_LEONARDO
+leonardoclp.build.core=arduino:arduino
+leonardoclp.build.variant=arduino:leonardo
+leonardoclp.build.extra_flags={build.usb_flags}
+
+# devices
+leonardoclp.menu.device.lnp=Lighting Node PRO
+leonardoclp.menu.device.lnp.build.pid=0x0c0b
+leonardoclp.menu.device.lnp.build.usb_product="Lighting Node PRO"
+leonardoclp.menu.device.cp=Commander PRO
+leonardoclp.menu.device.cp.build.pid=0x0c10
+leonardoclp.menu.device.cp.build.usb_product="Commander PRO"
+leonardoclp.menu.device.lnc=Lighting Node CORE
+leonardoclp.menu.device.lnc.build.pid=0x0c1a
+leonardoclp.menu.device.lnc.build.usb_product="Lighting Node CORE"
+leonardoclp.menu.device.slc=Smart Lighting Controller
+leonardoclp.menu.device.slc.build.pid=0x0c1e
+leonardoclp.menu.device.slc.build.usb_product="Smart Lighting Controller"
