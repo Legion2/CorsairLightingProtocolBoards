@@ -9,10 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Generate Archive name
+      id: archive-name
+      run: echo ::set-output name=filename::CorsairLightingProtocolBoards-${GITHUB_REF#refs/tags/}.zip
     - name: Create archive
+      env:
+        ARCHIVE_FILE: ${{ steps.archive-name.outputs.filename }}
       run: |
         mv avr CorsairLightingProtocolBoards
-        zip -r CorsairLightingProtocolBoards.zip CorsairLightingProtocolBoards
+        zip -r "$ARCHIVE_FILE" CorsairLightingProtocolBoards
     - name: Get upload url
       id: release-id
       run: |
@@ -24,14 +29,14 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        upload_url:  ${{ steps.release-id.outputs.upload_url }}
-        asset_path: ./CorsairLightingProtocolBoards.zip
-        asset_name: CorsairLightingProtocolBoards.zip
+        upload_url: ${{ steps.release-id.outputs.upload_url }}
+        asset_path: ${{ steps.archive-name.outputs.filename }}
+        asset_name: ${{ steps.archive-name.outputs.filename }}
         asset_content_type: application/zip
     - name: Print package metadata
       env:
-        ARCHIVE_URL: ${{ steps.upload-release-asset.outputs.browser_download_url }} 
-        ARCHIVE_FILE: CorsairLightingProtocolBoards.zip
+        ARCHIVE_URL: ${{ steps.upload-release-asset.outputs.browser_download_url }}
+        ARCHIVE_FILE: ${{ steps.archive-name.outputs.filename }}
       run: |
         echo url: "$ARCHIVE_URL"
         echo archiveFileName: "$ARCHIVE_FILE"
