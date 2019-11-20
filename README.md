@@ -1,5 +1,6 @@
 # Corsair Lighting Protocol Boards
-Arduino boards definition for use with the CorsairLightingProtocol library.
+Arduino board definitions for use with the [Corsair Lighting Protocol](https://github.com/Legion2/CorsairLightingProtocol) library.
+These board definitions have modified USB settings so they can be used to simulate corsair devices.
 
 ## How to use these boards in Arduino
 All boards can simply be installed in Arduino IDE via the Boards Manager.
