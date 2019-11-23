@@ -104,7 +104,7 @@ HoodLoader2atmega16u2clp.upload.wait_for_upload_port=true
 #usb settings, manufacturer overwritten by the IDE because of the VID
 HoodLoader2atmega16u2clp.build.vid=0x1b1c
 HoodLoader2atmega16u2clp.build.usb_manufacturer="Corsair"
-HoodLoader2atmega16u2clp.build.extra_flags={build.usb_flags} -DMAGIC_KEY_POS=(RAMEND-1) -DUSB_EP_SIZE=16
+HoodLoader2atmega16u2clp.build.extra_flags={build.usb_flags} -DMAGIC_KEY_POS=(RAMEND-1)
 
 # devices
 HoodLoader2atmega16u2clp.menu.device.lnp=Lighting Node PRO
