@@ -83,6 +83,45 @@
                             "version": "6.0.1-arduino5"
                         }
                     ]
+                },
+                {
+                    "name": "Corsair Lighting Protocol Boards",
+                    "architecture": "avr",
+                    "version": "0.1.2",
+                    "category": "Contributed",
+                    "help": {
+                        "online": "https://github.com/Legion2/CorsairLightingProtocolBoards"
+                    },
+                    "url": "https://github.com/Legion2/CorsairLightingProtocolBoards/releases/download/v0.1.2/CorsairLightingProtocolBoards-v0.1.2.zip",
+                    "archiveFileName": "CorsairLightingProtocolBoards-v0.1.2.zip",
+                    "checksum": "SHA-256:10c68fd990457cfacc4362b6d3a2920f979a840389e48513db8fabeeef761447",
+                    "size": "1971",
+                    "boards": [
+                        {
+                            "name": "CLP SparkFun Pro Micro 5V, 16 MHz"
+                        },
+                        {
+                            "name": "CLP SparkFun Pro Micro 3.3V, 8 MHz"
+                        },
+                        {
+                            "name": "CLP HoodLoader2 16u2"
+                        },
+                        {
+                            "name": "CLP Arduino Leonardo"
+                        }
+                    ],
+                    "toolsDependencies": [
+                        {
+                            "packager": "arduino",
+                            "name": "avr-gcc",
+                            "version": "4.8.1-arduino5"
+                        },
+                        {
+                            "packager": "arduino",
+                            "name": "avrdude",
+                            "version": "6.0.1-arduino5"
+                        }
+                    ]
                 }
             ],
             "tools": []
