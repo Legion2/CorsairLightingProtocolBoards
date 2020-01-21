@@ -2,7 +2,7 @@
 Arduino board definitions for use with the [Corsair Lighting Protocol](https://github.com/Legion2/CorsairLightingProtocol) library.
 These board definitions have modified USB settings so they can be used to simulate corsair devices.
 
-## How to use these boards in Arduino
+## Install CLP Boards in Arduino
 All boards can simply be installed in Arduino IDE via the Boards Manager.
 
 package index URL:
@@ -22,6 +22,15 @@ https://raw.githubusercontent.com/Legion2/CorsairLightingProtocolBoards/master/p
 1. Search and install **Corsair Lighting Protocol Boards**
 
    ![install boards in Board Manager](images/install-boards.png)
+1. For some of the boards you must install additional defintions: [SparkFun Boards](https://github.com/sparkfun/Arduino_Boards#installation-instructions), [Hoodloader2 Boards](https://github.com/NicoHood/HoodLoader2/wiki/Software-Installation#2-installing-board-definitions).
+   Make sure you add the additional board urls each on a new line and don't remove the already existing ones.
+
+   ![all additional boards urls](images/additional-boards-urls.png)
+
+## How to use these boards in Arduino
+The CLP Boards can now be used in Arduino IDE.
+The following is only an example on how to use the boards, it's not required for the installation.
+
 1. Select one of the boards under Corsair Lighting Protocol Boards in Tools->Board menu
 
    ![Tools->Board menu](images/select-board.png)
