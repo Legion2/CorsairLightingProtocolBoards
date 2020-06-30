@@ -33,9 +33,12 @@ promicro5vclp.menu.device.cp.build.usb_product="Commander PRO"
 promicro5vclp.menu.device.lnc=Lighting Node CORE
 promicro5vclp.menu.device.lnc.build.pid=0x0c1a
 promicro5vclp.menu.device.lnc.build.usb_product="Lighting Node CORE"
-promicro5vclp.menu.device.slc=Smart Lighting Controller
+promicro5vclp.menu.device.slc=Smart Lighting Controller (LS100)
 promicro5vclp.menu.device.slc.build.pid=0x0c1e
 promicro5vclp.menu.device.slc.build.usb_product="Smart Lighting Controller"
+promicro5vclp.menu.device.slt=Smart Lighting Towers (LT100)
+promicro5vclp.menu.device.slt.build.pid=0x0c23
+promicro5vclp.menu.device.slt.build.usb_product="Smart Lighting Towers"
 
 
 ################################################################################
@@ -71,9 +74,12 @@ promicro3vclp.menu.device.cp.build.usb_product="Commander PRO"
 promicro3vclp.menu.device.lnc=Lighting Node CORE
 promicro3vclp.menu.device.lnc.build.pid=0x0c1a
 promicro3vclp.menu.device.lnc.build.usb_product="Lighting Node CORE"
-promicro3vclp.menu.device.slc=Smart Lighting Controller
+promicro3vclp.menu.device.slc=Smart Lighting Controller (LS100)
 promicro3vclp.menu.device.slc.build.pid=0x0c1e
 promicro3vclp.menu.device.slc.build.usb_product="Smart Lighting Controller"
+promicro3vclp.menu.device.slt=Smart Lighting Towers (LT100)
+promicro3vclp.menu.device.slt.build.pid=0x0c23
+promicro3vclp.menu.device.slt.build.usb_product="Smart Lighting Towers"
 
 ################################################################################
 ################################ HoodLoader2 16u2 ##############################
@@ -116,9 +122,12 @@ HoodLoader2atmega16u2clp.menu.device.cp.build.usb_product="Commander PRO"
 HoodLoader2atmega16u2clp.menu.device.lnc=Lighting Node CORE
 HoodLoader2atmega16u2clp.menu.device.lnc.build.pid=0x0c1a
 HoodLoader2atmega16u2clp.menu.device.lnc.build.usb_product="Lighting Node CORE"
-HoodLoader2atmega16u2clp.menu.device.slc=Smart Lighting Controller
+HoodLoader2atmega16u2clp.menu.device.slc=Smart Lighting Controller (LS100)
 HoodLoader2atmega16u2clp.menu.device.slc.build.pid=0x0c1e
 HoodLoader2atmega16u2clp.menu.device.slc.build.usb_product="Smart Lighting Controller"
+HoodLoader2atmega16u2clp.menu.device.slt=Smart Lighting Towers (LT100)
+HoodLoader2atmega16u2clp.menu.device.slt.build.pid=0x0c23
+HoodLoader2atmega16u2clp.menu.device.slt.build.usb_product="Smart Lighting Towers"
 
 ################################################################################
 ################################ Arduino Leonardo ##############################
@@ -154,6 +163,9 @@ leonardoclp.menu.device.cp.build.usb_product="Commander PRO"
 leonardoclp.menu.device.lnc=Lighting Node CORE
 leonardoclp.menu.device.lnc.build.pid=0x0c1a
 leonardoclp.menu.device.lnc.build.usb_product="Lighting Node CORE"
-leonardoclp.menu.device.slc=Smart Lighting Controller
+leonardoclp.menu.device.slc=Smart Lighting Controller (LS100)
 leonardoclp.menu.device.slc.build.pid=0x0c1e
 leonardoclp.menu.device.slc.build.usb_product="Smart Lighting Controller"
+leonardoclp.menu.device.slt=Smart Lighting Towers (LT100)
+leonardoclp.menu.device.slt.build.pid=0x0c23
+leonardoclp.menu.device.slt.build.usb_product="Smart Lighting Towers"
