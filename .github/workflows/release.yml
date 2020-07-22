@@ -8,7 +8,7 @@ jobs:
   create-archive:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Generate Archive name
       id: archive-name
       run: echo ::set-output name=filename::CorsairLightingProtocolBoards-${GITHUB_REF#refs/tags/}.zip
