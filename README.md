@@ -4,6 +4,8 @@ These board definitions have modified USB settings so they can be used to simula
 
 ## Install CLP Boards in Arduino
 All boards can simply be installed in Arduino IDE via the Boards Manager.
+When using 3rd party boards such as SprakFun you must install them additionally.
+See [Supported Hardware Boards](#supported-hardware-boards) down below for more details.
 
 package index URL:
 ```
@@ -41,6 +43,12 @@ The following is only an example on how to use the boards, it's not required for
 
    ![Tools->Port](images/select-port.png)
 1. Compile/Upload as usual
+
+## Supported Hardware Boards
+| Hardware Board(s)  | Instructions                                                                                    |
+|--------------------|-------------------------------------------------------------------------------------------------|
+| Arduino Leonardo   | installed by default                                                                            |
+| SparkFun Pro Micro | install [SparkFun Boards](https://github.com/sparkfun/Arduino_Boards#installation-instructions) |
 
 ## License
 This project is licensed under the Apache License Version 2.0.
