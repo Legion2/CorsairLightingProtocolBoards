@@ -169,3 +169,272 @@ leonardoclp.menu.device.slc.build.usb_product="Smart Lighting Controller"
 leonardoclp.menu.device.slt=Smart Lighting Towers (LT100)
 leonardoclp.menu.device.slt.build.pid=0x0c23
 leonardoclp.menu.device.slt.build.usb_product="Smart Lighting Towers"
+
+
+################################################################################
+# Flora Configuration
+################################################################################
+flora8clp.name=CLP Adafruit Flora
+flora8clp.build.mcu=atmega32u4
+flora8clp.build.f_cpu=8000000L
+flora8clp.build.vid=0x1b1c
+flora8clp.build.core=arduino:arduino
+flora8clp.build.variant=adafruit:flora
+flora8clp.build.board=AVR_FLORA8
+flora8clp.build.usb_product="Flora"
+flora8clp.build.usb_manufacturer="Adafruit"
+flora8clp.build.extra_flags={build.usb_flags}
+flora8clp.upload.protocol=avr109
+flora8clp.upload.maximum_size=28672
+flora8clp.upload.speed=57600
+flora8clp.upload.disable_flushing=true
+flora8clp.upload.use_1200bps_touch=true
+flora8clp.upload.wait_for_upload_port=true
+flora8clp.upload.tool=arduino:avrdude
+
+# devices
+flora8clp.menu.device.lnp=Lighting Node PRO
+flora8clp.menu.device.lnp.build.pid=0x0c0b
+flora8clp.menu.device.lnp.build.usb_product="Lighting Node PRO"
+flora8clp.menu.device.cp=Commander PRO
+flora8clp.menu.device.cp.build.pid=0x0c10
+flora8clp.menu.device.cp.build.usb_product="Commander PRO"
+flora8clp.menu.device.lnc=Lighting Node CORE
+flora8clp.menu.device.lnc.build.pid=0x0c1a
+flora8clp.menu.device.lnc.build.usb_product="Lighting Node CORE"
+flora8clp.menu.device.slc=Smart Lighting Controller (LS100)
+flora8clp.menu.device.slc.build.pid=0x0c1e
+flora8clp.menu.device.slc.build.usb_product="Smart Lighting Controller"
+flora8clp.menu.device.slt=Smart Lighting Towers (LT100)
+flora8clp.menu.device.slt.build.pid=0x0c23
+flora8clp.menu.device.slt.build.usb_product="Smart Lighting Towers"
+
+################################################################################
+# Adafruit Feather 32u4 Configuration
+################################################################################
+
+feather32u4clp.name=CLP Adafruit Feather 32u4
+feather32u4clp.build.mcu=atmega32u4
+feather32u4clp.build.f_cpu=8000000L
+feather32u4clp.build.vid=0x1b1c
+feather32u4clp.build.core=arduino:arduino
+feather32u4clp.build.variant=adafruit:feather32u4
+feather32u4clp.build.board=AVR_FEATHER32U4
+feather32u4clp.build.usb_manufacturer="Corsair"
+feather32u4clp.build.extra_flags={build.usb_flags}
+feather32u4clp.upload.protocol=avr109
+feather32u4clp.upload.maximum_size=28672
+feather32u4clp.upload.speed=57600
+feather32u4clp.upload.disable_flushing=true
+feather32u4clp.upload.use_1200bps_touch=true
+feather32u4clp.upload.wait_for_upload_port=true
+feather32u4clp.upload.tool=arduino:avrdude
+
+# devices
+feather32u4clp.menu.device.lnp=Lighting Node PRO
+feather32u4clp.menu.device.lnp.build.pid=0x0c0b
+feather32u4clp.menu.device.lnp.build.usb_product="Lighting Node PRO"
+feather32u4clp.menu.device.cp=Commander PRO
+feather32u4clp.menu.device.cp.build.pid=0x0c10
+feather32u4clp.menu.device.cp.build.usb_product="Commander PRO"
+feather32u4clp.menu.device.lnc=Lighting Node CORE
+feather32u4clp.menu.device.lnc.build.pid=0x0c1a
+feather32u4clp.menu.device.lnc.build.usb_product="Lighting Node CORE"
+feather32u4clp.menu.device.slc=Smart Lighting Controller (LS100)
+feather32u4clp.menu.device.slc.build.pid=0x0c1e
+feather32u4clp.menu.device.slc.build.usb_product="Smart Lighting Controller"
+feather32u4clp.menu.device.slt=Smart Lighting Towers (LT100)
+feather32u4clp.menu.device.slt.build.pid=0x0c23
+feather32u4clp.menu.device.slt.build.usb_product="Smart Lighting Towers"
+
+################################################################################
+# Adafruit Circuit Playground 32u4 w/Caterina Configuration
+################################################################################
+circuitplay32u4catclp.name=CLP Adafruit Circuit Playground Classic
+circuitplay32u4catclp.build.mcu=atmega32u4
+circuitplay32u4catclp.build.f_cpu=8000000L
+circuitplay32u4catclp.build.vid=0x1b1c
+circuitplay32u4catclp.build.core=arduino:arduino
+circuitplay32u4catclp.build.variant=adafruit:circuitplay32u4
+circuitplay32u4catclp.build.board=AVR_CIRCUITPLAY
+circuitplay32u4catclp.build.usb_product="Circuit Playground"
+circuitplay32u4catclp.build.usb_manufacturer="Adafruit"
+circuitplay32u4catclp.build.extra_flags={build.usb_flags}
+circuitplay32u4catclp.upload.protocol=avr109
+circuitplay32u4catclp.upload.maximum_size=28672
+circuitplay32u4catclp.upload.speed=57600
+circuitplay32u4catclp.upload.disable_flushing=true
+circuitplay32u4catclp.upload.use_1200bps_touch=true
+circuitplay32u4catclp.upload.wait_for_upload_port=true
+circuitplay32u4catclp.upload.tool=arduino:avrdude
+
+# devices
+circuitplay32u4catclp.menu.device.lnp=Lighting Node PRO
+circuitplay32u4catclp.menu.device.lnp.build.pid=0x0c0b
+circuitplay32u4catclp.menu.device.lnp.build.usb_product="Lighting Node PRO"
+circuitplay32u4catclp.menu.device.cp=Commander PRO
+circuitplay32u4catclp.menu.device.cp.build.pid=0x0c10
+circuitplay32u4catclp.menu.device.cp.build.usb_product="Commander PRO"
+circuitplay32u4catclp.menu.device.lnc=Lighting Node CORE
+circuitplay32u4catclp.menu.device.lnc.build.pid=0x0c1a
+circuitplay32u4catclp.menu.device.lnc.build.usb_product="Lighting Node CORE"
+circuitplay32u4catclp.menu.device.slc=Smart Lighting Controller (LS100)
+circuitplay32u4catclp.menu.device.slc.build.pid=0x0c1e
+circuitplay32u4catclp.menu.device.slc.build.usb_product="Smart Lighting Controller"
+circuitplay32u4catclp.menu.device.slt=Smart Lighting Towers (LT100)
+circuitplay32u4catclp.menu.device.slt.build.pid=0x0c23
+circuitplay32u4catclp.menu.device.slt.build.usb_product="Smart Lighting Towers"
+
+################################################################################
+# Adafruit 32u4 ItsyBitsy 5V @ 16MHz
+################################################################################
+itsybitsy32u4_5Vclp.name=CLP Adafruit ItsyBitsy 32u4 5V 16MHz
+itsybitsy32u4_5Vclp.build.mcu=atmega32u4
+itsybitsy32u4_5Vclp.build.f_cpu=16000000L
+itsybitsy32u4_5Vclp.build.vid=0x1b1c
+itsybitsy32u4_5Vclp.build.core=arduino:arduino
+itsybitsy32u4_5Vclp.build.variant=adafruit:itsybitsy32u4
+itsybitsy32u4_5Vclp.build.board=AVR_ITSYBITSY32U4_5V
+itsybitsy32u4_5Vclp.build.usb_product="ItsyBitsy 32u4 5V 16MHz"
+itsybitsy32u4_5Vclp.build.usb_manufacturer="Adafruit"
+itsybitsy32u4_5Vclp.build.extra_flags={build.usb_flags}
+itsybitsy32u4_5Vclp.upload.protocol=avr109
+itsybitsy32u4_5Vclp.upload.maximum_size=28672
+itsybitsy32u4_5Vclp.upload.speed=57600
+itsybitsy32u4_5Vclp.upload.disable_flushing=true
+itsybitsy32u4_5Vclp.upload.use_1200bps_touch=true
+itsybitsy32u4_5Vclp.upload.wait_for_upload_port=true
+itsybitsy32u4_5Vclp.upload.tool=arduino:avrdude
+
+# devices
+itsybitsy32u4_5Vclp.menu.device.lnp=Lighting Node PRO
+itsybitsy32u4_5Vclp.menu.device.lnp.build.pid=0x0c0b
+itsybitsy32u4_5Vclp.menu.device.lnp.build.usb_product="Lighting Node PRO"
+itsybitsy32u4_5Vclp.menu.device.cp=Commander PRO
+itsybitsy32u4_5Vclp.menu.device.cp.build.pid=0x0c10
+itsybitsy32u4_5Vclp.menu.device.cp.build.usb_product="Commander PRO"
+itsybitsy32u4_5Vclp.menu.device.lnc=Lighting Node CORE
+itsybitsy32u4_5Vclp.menu.device.lnc.build.pid=0x0c1a
+itsybitsy32u4_5Vclp.menu.device.lnc.build.usb_product="Lighting Node CORE"
+itsybitsy32u4_5Vclp.menu.device.slc=Smart Lighting Controller (LS100)
+itsybitsy32u4_5Vclp.menu.device.slc.build.pid=0x0c1e
+itsybitsy32u4_5Vclp.menu.device.slc.build.usb_product="Smart Lighting Controller"
+itsybitsy32u4_5Vclp.menu.device.slt=Smart Lighting Towers (LT100)
+itsybitsy32u4_5Vclp.menu.device.slt.build.pid=0x0c23
+itsybitsy32u4_5Vclp.menu.device.slt.build.usb_product="Smart Lighting Towers"
+
+################################################################################
+# Adafruit 32u4 ItsyBitsy 3V @ 8MHz
+################################################################################
+itsybitsy32u4_3Vclp.name=CLP Adafruit ItsyBitsy 32u4 3V 8MHz
+itsybitsy32u4_3Vclp.build.mcu=atmega32u4
+itsybitsy32u4_3Vclp.build.f_cpu=8000000L
+itsybitsy32u4_3Vclp.build.vid=0x1b1c
+itsybitsy32u4_3Vclp.build.core=arduino:arduino
+itsybitsy32u4_3Vclp.build.variant=adafruit:itsybitsy32u4
+itsybitsy32u4_3Vclp.build.board=AVR_ITSYBITSY32U4_3V
+itsybitsy32u4_3Vclp.build.usb_product="ItsyBitsy 32u4 3V 8MHz"
+itsybitsy32u4_3Vclp.build.usb_manufacturer="Adafruit"
+itsybitsy32u4_3Vclp.build.extra_flags={build.usb_flags}
+itsybitsy32u4_3Vclp.upload.protocol=avr109
+itsybitsy32u4_3Vclp.upload.maximum_size=28672
+itsybitsy32u4_3Vclp.upload.speed=57600
+itsybitsy32u4_3Vclp.upload.disable_flushing=true
+itsybitsy32u4_3Vclp.upload.use_1200bps_touch=true
+itsybitsy32u4_3Vclp.upload.wait_for_upload_port=true
+itsybitsy32u4_3Vclp.upload.tool=arduino:avrdude
+
+# devices
+itsybitsy32u4_3Vclp.menu.device.lnp=Lighting Node PRO
+itsybitsy32u4_3Vclp.menu.device.lnp.build.pid=0x0c0b
+itsybitsy32u4_3Vclp.menu.device.lnp.build.usb_product="Lighting Node PRO"
+itsybitsy32u4_3Vclp.menu.device.cp=Commander PRO
+itsybitsy32u4_3Vclp.menu.device.cp.build.pid=0x0c10
+itsybitsy32u4_3Vclp.menu.device.cp.build.usb_product="Commander PRO"
+itsybitsy32u4_3Vclp.menu.device.lnc=Lighting Node CORE
+itsybitsy32u4_3Vclp.menu.device.lnc.build.pid=0x0c1a
+itsybitsy32u4_3Vclp.menu.device.lnc.build.usb_product="Lighting Node CORE"
+itsybitsy32u4_3Vclp.menu.device.slc=Smart Lighting Controller (LS100)
+itsybitsy32u4_3Vclp.menu.device.slc.build.pid=0x0c1e
+itsybitsy32u4_3Vclp.menu.device.slc.build.usb_product="Smart Lighting Controller"
+itsybitsy32u4_3Vclp.menu.device.slt=Smart Lighting Towers (LT100)
+itsybitsy32u4_3Vclp.menu.device.slt.build.pid=0x0c23
+itsybitsy32u4_3Vclp.menu.device.slt.build.usb_product="Smart Lighting Towers"
+
+
+################################################################################
+# Bluefruit Micro Configuration
+################################################################################
+bluefruitmicroclp.name=CLP Adafruit Bluefruit Micro
+bluefruitmicroclp.build.mcu=atmega32u4
+bluefruitmicroclp.build.f_cpu=8000000L
+bluefruitmicroclp.build.vid=0x1b1c
+bluefruitmicroclp.build.core=arduino:arduino
+bluefruitmicroclp.build.variant=adafruit:bluefruitmicro
+bluefruitmicroclp.build.board=AVR_BLUEFRUITMICRO
+bluefruitmicroclp.build.usb_product="Bluefruit Micro"
+bluefruitmicroclp.build.usb_manufacturer="Adafruit"
+bluefruitmicroclp.build.extra_flags={build.usb_flags}
+bluefruitmicroclp.upload.protocol=avr109
+bluefruitmicroclp.upload.maximum_size=28672
+bluefruitmicroclp.upload.speed=57600
+bluefruitmicroclp.upload.disable_flushing=true
+bluefruitmicroclp.upload.use_1200bps_touch=true
+bluefruitmicroclp.upload.wait_for_upload_port=true
+bluefruitmicroclp.upload.tool=arduino:avrdude
+
+# devices
+bluefruitmicroclp.menu.device.lnp=Lighting Node PRO
+bluefruitmicroclp.menu.device.lnp.build.pid=0x0c0b
+bluefruitmicroclp.menu.device.lnp.build.usb_product="Lighting Node PRO"
+bluefruitmicroclp.menu.device.cp=Commander PRO
+bluefruitmicroclp.menu.device.cp.build.pid=0x0c10
+bluefruitmicroclp.menu.device.cp.build.usb_product="Commander PRO"
+bluefruitmicroclp.menu.device.lnc=Lighting Node CORE
+bluefruitmicroclp.menu.device.lnc.build.pid=0x0c1a
+bluefruitmicroclp.menu.device.lnc.build.usb_product="Lighting Node CORE"
+bluefruitmicroclp.menu.device.slc=Smart Lighting Controller (LS100)
+bluefruitmicroclp.menu.device.slc.build.pid=0x0c1e
+bluefruitmicroclp.menu.device.slc.build.usb_product="Smart Lighting Controller"
+bluefruitmicroclp.menu.device.slt=Smart Lighting Towers (LT100)
+bluefruitmicroclp.menu.device.slt.build.pid=0x0c23
+bluefruitmicroclp.menu.device.slt.build.usb_product="Smart Lighting Towers"
+
+
+################################################################################
+# Adafruit 32u4 Breakout Configuration
+################################################################################
+adafruit32u4clp.name=CLP Adafruit 32u4 Breakout
+adafruit32u4clp.build.mcu=atmega32u4
+adafruit32u4clp.build.f_cpu=16000000L
+adafruit32u4clp.build.vid=0x1b1c
+adafruit32u4clp.build.core=arduino:arduino
+adafruit32u4clp.build.variant=adafruit:adafruit32u4
+adafruit32u4clp.build.board=AVR_ADAFRUIT32U4
+adafruit32u4clp.build.usb_product="32u4 Breakout"
+adafruit32u4clp.build.usb_manufacturer="Adafruit"
+adafruit32u4clp.build.extra_flags={build.usb_flags}
+adafruit32u4clp.upload.protocol=avr109
+adafruit32u4clp.upload.maximum_size=28672
+adafruit32u4clp.upload.speed=57600
+adafruit32u4clp.upload.disable_flushing=true
+adafruit32u4clp.upload.use_1200bps_touch=true
+adafruit32u4clp.upload.wait_for_upload_port=true
+adafruit32u4clp.upload.tool=arduino:avrdude
+
+# devices
+adafruit32u4clp.menu.device.lnp=Lighting Node PRO
+adafruit32u4clp.menu.device.lnp.build.pid=0x0c0b
+adafruit32u4clp.menu.device.lnp.build.usb_product="Lighting Node PRO"
+adafruit32u4clp.menu.device.cp=Commander PRO
+adafruit32u4clp.menu.device.cp.build.pid=0x0c10
+adafruit32u4clp.menu.device.cp.build.usb_product="Commander PRO"
+adafruit32u4clp.menu.device.lnc=Lighting Node CORE
+adafruit32u4clp.menu.device.lnc.build.pid=0x0c1a
+adafruit32u4clp.menu.device.lnc.build.usb_product="Lighting Node CORE"
+adafruit32u4clp.menu.device.slc=Smart Lighting Controller (LS100)
+adafruit32u4clp.menu.device.slc.build.pid=0x0c1e
+adafruit32u4clp.menu.device.slc.build.usb_product="Smart Lighting Controller"
+adafruit32u4clp.menu.device.slt=Smart Lighting Towers (LT100)
+adafruit32u4clp.menu.device.slt.build.pid=0x0c23
+adafruit32u4clp.menu.device.slt.build.usb_product="Smart Lighting Towers"

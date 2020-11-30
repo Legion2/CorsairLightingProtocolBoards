@@ -4,7 +4,7 @@ These board definitions have modified USB settings so they can be used to simula
 
 ## Install CLP Boards in Arduino
 All boards can simply be installed in Arduino IDE via the Boards Manager.
-When using 3rd party boards such as SprakFun you must install them additionally.
+When using 3rd party boards such as SparkFun you must install them additionally.
 See [Supported Hardware Boards](#supported-hardware-boards) down below for more details.
 
 package index URL:
@@ -45,10 +45,19 @@ The following is only an example on how to use the boards, it's not required for
 1. Compile/Upload as usual
 
 ## Supported Hardware Boards
-| Hardware Board(s)  | Instructions                                                                                    |
-|--------------------|-------------------------------------------------------------------------------------------------|
-| Arduino Leonardo   | installed by default                                                                            |
-| SparkFun Pro Micro | install [SparkFun Boards](https://github.com/sparkfun/Arduino_Boards#installation-instructions) |
+| Hardware Board(s)        | Instructions                                                                                                  |
+|--------------------------|---------------------------------------------------------------------------------------------------------------|
+| Arduino Leonardo         | installed by default                                                                                          |
+| SparkFun Pro Micro       | install [SparkFun Boards](https://github.com/sparkfun/Arduino_Boards#installation-instructions)               |
+| Adafruit 32u4 AVR Boards | install [Adafruit AVR Boards](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/arduino-ide-setup) |
+
+## How to release a new version (development)
+
+1. Update the version in `avr/platform.txt`, commit and push the changes.
+1. On GitHub create a new Release for the version.
+1. Wait for the [Release GitHub Action](https://github.com/Legion2/CorsairLightingProtocolBoards/actions?query=workflow%3ARelease) to complete.
+1. Add the new version to the package index file by using the infos provided by the Release GitHub Action.
+   Commit and push these changes.
 
 ## License
 This project is licensed under the Apache License Version 2.0.
