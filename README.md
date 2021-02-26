@@ -53,10 +53,9 @@ The following is only an example on how to use the boards, it's not required for
 
 ## How to release a new version (development)
 
-1. Update the version in `avr/platform.txt`, commit and push the changes.
-1. On GitHub create a new Release for the version.
+1. On GitHub manually trigger the Release Workflow for the platform and the new version.
 1. Wait for the [Release GitHub Action](https://github.com/Legion2/CorsairLightingProtocolBoards/actions?query=workflow%3ARelease) to complete.
-1. Add the new version to the package index file by using the infos provided by the Release GitHub Action.
+1. Add the new version to the package index file by running `./scripts/update-index.mjs 'metadatajson'` and provide the metadata json from the output of the Release GitHub Action.
    Commit and push these changes.
 
 ## License

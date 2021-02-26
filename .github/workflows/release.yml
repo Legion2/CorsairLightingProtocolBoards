@@ -1,44 +1,74 @@
 name: Release
 
 on:
-  release:
-    types: [published]
+  workflow_dispatch:
+    inputs:
+      platform-dir:
+        description: "The platform for which a new version should be released"
+        required: true
+      version:
+        description: "The new version for the platform"
+        required: true
+      release-message:
+        description: "The message of the Release"
+        required: true
 
 jobs:
   create-archive:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Generate Archive name
-      id: archive-name
-      run: echo ::set-output name=filename::CorsairLightingProtocolBoards-${GITHUB_REF#refs/tags/}.zip
-    - name: Create archive
-      env:
-        ARCHIVE_FILE: ${{ steps.archive-name.outputs.filename }}
-      run: |
-        mv avr CorsairLightingProtocolBoards
-        zip -r "$ARCHIVE_FILE" CorsairLightingProtocolBoards
-    - name: Get upload url
-      id: release-id
-      run: |
-        RELEASE_ID=$(jq --raw-output '.release.id' $GITHUB_EVENT_PATH)
-        echo "::set-output name=upload_url::https://uploads.github.com/repos/${GITHUB_REPOSITORY}/releases/${RELEASE_ID}/assets{?name,label}"
-    - name: Upload Release Asset
-      id: upload-release-asset 
-      uses: actions/upload-release-asset@v1.0.2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.release-id.outputs.upload_url }}
-        asset_path: ${{ steps.archive-name.outputs.filename }}
-        asset_name: ${{ steps.archive-name.outputs.filename }}
-        asset_content_type: application/zip
-    - name: Print package metadata
-      env:
-        ARCHIVE_URL: ${{ steps.upload-release-asset.outputs.browser_download_url }}
-        ARCHIVE_FILE: ${{ steps.archive-name.outputs.filename }}
-      run: |
-        echo url: "$ARCHIVE_URL"
-        echo archiveFileName: "$ARCHIVE_FILE"
-        echo checksum: SHA-256:$(sha256sum $ARCHIVE_FILE | cut -f1 -d ' ')
-        echo size: $(stat -c%s $ARCHIVE_FILE)
+      - uses: actions/checkout@v2
+      - name: Update version in files
+        id: update-files
+        run: ./scripts/update-version.mjs ${{ github.event.inputs.platform-dir }} ${{ github.event.inputs.version }}
+      - name: Generate Tag name
+        id: tag-name
+        run: echo ::set-output name=tag::${{ github.event.inputs.platform-dir }}-${{ github.event.inputs.version }}
+      - name: Generate Archive name
+        id: archive-name
+        run: echo ::set-output name=filename::CorsairLightingProtocolBoards-${{ steps.tag-name.outputs.tag }}.zip
+      - name: Push updated files
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "updated version of ${{ github.event.inputs.platform-dir }} to ${{ github.event.inputs.version }}"
+          git push
+      - name: Create archive
+        run: |
+          mv avr CorsairLightingProtocolBoards
+          zip -r "${{ steps.archive-name.outputs.filename }}" CorsairLightingProtocolBoards
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag-name.outputs.tag }}
+          commit: ${{ github.ref }}
+          artifacts: ${{ steps.archive-name.outputs.filename }}
+          artifactContentType: application/zip
+          body: ${{ github.event.inputs.release-message }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Calculate hash and size
+        id: metadata
+        run: |
+          echo ::set-output name=hash::SHA-256:$(sha256sum $ARCHIVE_FILE | cut -f1 -d ' ')
+          echo ::set-output name=size::$(stat -c%s $ARCHIVE_FILE)
+      - name: Print package metadata
+        uses: actions/github-script@v3
+        with:
+          result-encoding: string
+          script: |
+            const release = await github.repos.getReleaseByTag({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag: "${{ steps.tag-name.outputs.tag }}"
+            });
+            const browserDownloadUrl = release.data.assets.find(asset => asset.name === "${{ steps.archive-name.outputs.filename }}").browser_download_url;
+            const metadata = {
+              platform: "${{ steps.update-files.outputs.platform }}",
+              version: "${{ github.event.inputs.version }}",
+              url: browserDownloadUrl,
+              archiveFileName: "${{ steps.archive-name.outputs.filename }}",
+              checksum: "${{ steps.metadata.outputs.hash }}",
+              size: ${{ steps.metadata.outputs.size }},
+            };
+            console.log(JSON.stringify(metadata));
