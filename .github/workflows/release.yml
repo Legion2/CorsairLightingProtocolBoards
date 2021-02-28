@@ -36,8 +36,8 @@ jobs:
           git push
       - name: Create archive
         run: |
-          mv avr CorsairLightingProtocolBoards
-          zip -r "${{ steps.archive-name.outputs.filename }}" CorsairLightingProtocolBoards
+          mv ${{ github.event.inputs.platform-dir }} CorsairLightingProtocolBoards-${{ steps.tag-name.outputs.tag }}
+          zip -r "${{ steps.archive-name.outputs.filename }}" CorsairLightingProtocolBoards-${{ steps.tag-name.outputs.tag }}
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
@@ -50,8 +50,8 @@ jobs:
       - name: Calculate hash and size
         id: metadata
         run: |
-          echo ::set-output name=hash::SHA-256:$(sha256sum $ARCHIVE_FILE | cut -f1 -d ' ')
-          echo ::set-output name=size::$(stat -c%s $ARCHIVE_FILE)
+          echo ::set-output name=hash::SHA-256:$(sha256sum ${{ steps.archive-name.outputs.filename }} | cut -f1 -d ' ')
+          echo ::set-output name=size::$(stat -c%s ${{ steps.archive-name.outputs.filename }})
       - name: Print package metadata
         uses: actions/github-script@v3
         with:
