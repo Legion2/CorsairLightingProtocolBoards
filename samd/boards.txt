@@ -24,7 +24,6 @@ arduino_zero_nativeclp.upload.wait_for_upload_port=true
 arduino_zero_nativeclp.upload.native_usb=true
 arduino_zero_nativeclp.build.mcu=cortex-m0plus
 arduino_zero_nativeclp.build.f_cpu=48000000L
-arduino_zero_nativeclp.build.usb_product="Arduino Zero"
 arduino_zero_nativeclp.build.usb_manufacturer="Corsair"
 arduino_zero_nativeclp.build.board=SAMD_ZERO
 arduino_zero_nativeclp.build.core=arduino:arduino
@@ -34,8 +33,6 @@ arduino_zero_nativeclp.build.openocdscript=openocd_scripts/arduino_zero.cfg
 arduino_zero_nativeclp.build.variant=arduino:arduino_zero
 arduino_zero_nativeclp.build.variant_system_lib=
 arduino_zero_nativeclp.build.vid=0x0x1b1c
-arduino_zero_nativeclp.bootloader.tool=arduino:openocd
-arduino_zero_nativeclp.bootloader.file=zero/samd21_sam_ba.bin
 
 # devices
 arduino_zero_nativeclp.menu.device.lnp=Lighting Node PRO
@@ -58,10 +55,6 @@ arduino_zero_nativeclp.menu.device.slt.build.usb_product="Smart Lighting Towers"
 # Adafruit Trinket M0 (SAMD21) Configuration
 ################################################################################
 adafruit_trinket_m0clp.name=CLP Adafruit Trinket M0
-adafruit_trinket_m0clp.vid.0=0x239A
-adafruit_trinket_m0clp.pid.0=0x801E
-adafruit_trinket_m0clp.vid.1=0x239A
-adafruit_trinket_m0clp.pid.1=0x001E
 adafruit_trinket_m0clp.upload.tool=arduino:bossac
 adafruit_trinket_m0clp.upload.protocol=sam-ba
 adafruit_trinket_m0clp.upload.maximum_size=262144
@@ -71,7 +64,6 @@ adafruit_trinket_m0clp.upload.wait_for_upload_port=true
 adafruit_trinket_m0clp.upload.native_usb=true
 adafruit_trinket_m0clp.build.mcu=cortex-m0plus
 adafruit_trinket_m0clp.build.f_cpu=48000000L
-adafruit_trinket_m0clp.build.usb_product="Trinket M0"
 adafruit_trinket_m0clp.build.usb_manufacturer="Corsair"
 adafruit_trinket_m0clp.build.board=TRINKET_M0
 adafruit_trinket_m0clp.build.core=adafruit:arduino
@@ -81,8 +73,6 @@ adafruit_trinket_m0clp.build.openocdscript=openocd_scripts/trinket_m0.cfg
 adafruit_trinket_m0clp.build.variant=adafruit:trinket_m0
 adafruit_trinket_m0clp.build.variant_system_lib=
 adafruit_trinket_m0clp.build.vid=0x1b1c
-adafruit_trinket_m0clp.bootloader.tool=arduino:openocd
-adafruit_trinket_m0clp.bootloader.file=trinketm0/bootloader-trinket_m0-v2.0.0-adafruit.5.bin
 adafruit_trinket_m0clp.menu.opt.small=Small (-Os) (standard)
 adafruit_trinket_m0clp.menu.opt.small.build.flags.optimize=-Os
 adafruit_trinket_m0clp.menu.opt.fast=Fast (-O2)

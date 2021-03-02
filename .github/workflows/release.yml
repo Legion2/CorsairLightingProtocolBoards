@@ -14,7 +14,7 @@ on:
         required: true
 
 jobs:
-  create-archive:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -29,8 +29,8 @@ jobs:
         run: echo ::set-output name=filename::CorsairLightingProtocolBoards-${{ steps.tag-name.outputs.tag }}.zip
       - name: Push updated files
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add .
           git commit -m "updated version of ${{ github.event.inputs.platform-dir }} to ${{ github.event.inputs.version }}"
           git push

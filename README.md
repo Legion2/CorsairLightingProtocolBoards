@@ -24,7 +24,7 @@ https://raw.githubusercontent.com/Legion2/CorsairLightingProtocolBoards/master/p
 1. Search and install **Corsair Lighting Protocol Boards** and/or **Corsair Lighting Protocol Boards - SAMD**
 
    ![install boards in Board Manager](images/install-boards.png)
-1. For some of the boards you must install additional defintions: Arduino SAMD Boards (32-bits ARM Cortex-M0+), [SparkFun Boards](https://github.com/sparkfun/Arduino_Boards#installation-instructions), [Adafruit Boards](https://learn.adafruit.com/add-boards-arduino-v164/setup), [Hoodloader2 Boards](https://github.com/NicoHood/HoodLoader2/wiki/Software-Installation#2-installing-board-definitions).
+1. For some of the boards you must install additional definitions: Arduino SAMD Boards (32-bits ARM Cortex-M0+), [SparkFun Boards](https://github.com/sparkfun/Arduino_Boards#installation-instructions), [Adafruit Boards](https://learn.adafruit.com/add-boards-arduino-v164/setup), [Hoodloader2 Boards](https://github.com/NicoHood/HoodLoader2/wiki/Software-Installation#2-installing-board-definitions).
    Make sure you add the additional board urls each on a new line and don't remove the already existing ones.
 
    ![all additional boards urls](images/additional-boards-urls.png)
