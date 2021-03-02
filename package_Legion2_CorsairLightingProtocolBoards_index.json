@@ -249,6 +249,28 @@
                         }
                     ],
                     "toolsDependencies": []
+                },
+                {
+                    "name": "Corsair Lighting Protocol Boards - SAMD",
+                    "architecture": "samd",
+                    "version": "0.1.1",
+                    "category": "Contributed",
+                    "help": {
+                        "online": "https://github.com/Legion2/CorsairLightingProtocolBoards"
+                    },
+                    "url": "https://github.com/Legion2/CorsairLightingProtocolBoards/releases/download/samd-0.1.1/CorsairLightingProtocolBoards-samd-0.1.1.zip",
+                    "archiveFileName": "CorsairLightingProtocolBoards-samd-0.1.1.zip",
+                    "checksum": "SHA-256:2ad14508bac72ac122671e668e35a788d804e1104ea8743599d68ace6eb51982",
+                    "size": 2001,
+                    "boards": [
+                        {
+                            "name": "CLP Arduino Zero (Native USB Port)"
+                        },
+                        {
+                            "name": "CLP Adafruit Trinket M0"
+                        }
+                    ],
+                    "toolsDependencies": []
                 }
             ],
             "tools": []
