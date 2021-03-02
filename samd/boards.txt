@@ -6,14 +6,6 @@ menu.device=Device
 # Arduino Zero (Native USB Port) (SAMD21) Configuration
 ################################################################################
 arduino_zero_nativeclp.name=CLP Arduino Zero (Native USB Port)
-arduino_zero_nativeclp.vid.0=0x2341
-arduino_zero_nativeclp.pid.0=0x804d
-arduino_zero_nativeclp.vid.1=0x2341
-arduino_zero_nativeclp.pid.1=0x004d
-arduino_zero_nativeclp.vid.2=0x2341
-arduino_zero_nativeclp.pid.2=0x824d
-arduino_zero_nativeclp.vid.3=0x2341
-arduino_zero_nativeclp.pid.3=0x024d
 
 arduino_zero_nativeclp.upload.tool=arduino:bossac
 arduino_zero_nativeclp.upload.protocol=sam-ba
@@ -32,7 +24,7 @@ arduino_zero_nativeclp.build.ldscript=linker_scripts/gcc/flash_with_bootloader.l
 arduino_zero_nativeclp.build.openocdscript=openocd_scripts/arduino_zero.cfg
 arduino_zero_nativeclp.build.variant=arduino:arduino_zero
 arduino_zero_nativeclp.build.variant_system_lib=
-arduino_zero_nativeclp.build.vid=0x0x1b1c
+arduino_zero_nativeclp.build.vid=0x1b1c
 
 # devices
 arduino_zero_nativeclp.menu.device.lnp=Lighting Node PRO
