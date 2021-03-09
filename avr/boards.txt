@@ -170,6 +170,46 @@ leonardoclp.menu.device.slt=Smart Lighting Towers (LT100)
 leonardoclp.menu.device.slt.build.pid=0x0c23
 leonardoclp.menu.device.slt.build.usb_product="Smart Lighting Towers"
 
+################################################################################
+################################ Arduino Micro #################################
+################################################################################
+
+microclp.name=CLP Arduino Micro
+
+microclp.upload.tool=arduino:avrdude
+microclp.upload.protocol=avr109
+microclp.upload.maximum_size=28672
+microclp.upload.maximum_data_size=2560
+microclp.upload.speed=57600
+microclp.upload.disable_flushing=true
+microclp.upload.use_1200bps_touch=true
+microclp.upload.wait_for_upload_port=true
+
+microclp.build.mcu=atmega32u4
+microclp.build.f_cpu=16000000L
+microclp.build.vid=0x1b1c
+microclp.build.usb_manufacturer="Corsair"
+microclp.build.board=AVR_MICRO
+microclp.build.core=arduino:arduino
+microclp.build.variant=arduino:micro
+microclp.build.extra_flags={build.usb_flags}
+
+# devices
+microclp.menu.device.lnp=Lighting Node PRO
+microclp.menu.device.lnp.build.pid=0x0c0b
+microclp.menu.device.lnp.build.usb_product="Lighting Node PRO"
+microclp.menu.device.cp=Commander PRO
+microclp.menu.device.cp.build.pid=0x0c10
+microclp.menu.device.cp.build.usb_product="Commander PRO"
+microclp.menu.device.lnc=Lighting Node CORE
+microclp.menu.device.lnc.build.pid=0x0c1a
+microclp.menu.device.lnc.build.usb_product="Lighting Node CORE"
+microclp.menu.device.slc=Smart Lighting Controller (LS100)
+microclp.menu.device.slc.build.pid=0x0c1e
+microclp.menu.device.slc.build.usb_product="Smart Lighting Controller"
+microclp.menu.device.slt=Smart Lighting Towers (LT100)
+microclp.menu.device.slt.build.pid=0x0c23
+microclp.menu.device.slt.build.usb_product="Smart Lighting Towers"
 
 ################################################################################
 # Flora Configuration
