@@ -39,7 +39,7 @@ jobs:
           mv ${{ github.event.inputs.platform-dir }} CorsairLightingProtocolBoards-${{ steps.tag-name.outputs.tag }}
           zip -r "${{ steps.archive-name.outputs.filename }}" CorsairLightingProtocolBoards-${{ steps.tag-name.outputs.tag }}
       - name: Create Release
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1.8.4
         with:
           tag: ${{ steps.tag-name.outputs.tag }}
           commit: ${{ github.ref }}
