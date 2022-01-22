@@ -1,2 +1,0 @@
-name=Corsair Lighting Protocol Boards - SAMD
-version=0.1.1
