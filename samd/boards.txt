@@ -60,7 +60,7 @@ adafruit_trinket_m0clp.build.usb_manufacturer="Corsair"
 adafruit_trinket_m0clp.build.board=TRINKET_M0
 adafruit_trinket_m0clp.build.core=adafruit:arduino
 # Hack to override Adafruit platform.txt usb_flags which causes compiler to look for TinyUSB library in CLP  
-adafruit_trinket_m0clp.build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} -DUSBCON -DUSB_CONFIG_POWER={build.usb_power} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}' {build.flags.usbstack} {build.flags.debug} "-I{build.variant.path}/../../libraries/Adafruit_TinyUSB_Arduino/src/arduino"
+adafruit_trinket_m0clp.build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} -DUSBCON -DUSB_CONFIG_POWER={build.usb_power} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}' {build.flags.usbstack} {build.flags.debug}
 adafruit_trinket_m0clp.build.extra_flags=-DCRYSTALLESS -DADAFRUIT_TRINKET_M0 -D__SAMD21E18A__ -DARM_MATH_CM0PLUS -DUSE_TINYUSB {build.usb_flags}
 adafruit_trinket_m0clp.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 adafruit_trinket_m0clp.build.openocdscript=openocd_scripts/trinket_m0.cfg
