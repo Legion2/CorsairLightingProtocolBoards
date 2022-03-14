@@ -1,6 +1,6 @@
 # Corsair Lighting Protocol Boards
 Arduino board definitions for use with the [Corsair Lighting Protocol](https://github.com/Legion2/CorsairLightingProtocol) library.
-These board definitions have modified USB settings so they can be used to simulate corsair devices.
+These board definitions have modified USB settings so they can be used to simulate Corsair devices. It is not required for boards using TinyUSB other than the ESP32 series (not yet implemented).
 
 ## Install CLP Boards in Arduino
 All boards can simply be installed in Arduino IDE via the Boards Manager.
@@ -21,10 +21,10 @@ https://raw.githubusercontent.com/Legion2/CorsairLightingProtocolBoards/master/p
 1. Open the **Boards Manager** by opening the menu Tools->Board->Board Manager...
 
    ![Tools->Board->Board Manager...](images/open-boards-manager.png)
-1. Search and install **Corsair Lighting Protocol Boards** and/or **Corsair Lighting Protocol Boards - SAMD**
+1. Search and install **Corsair Lighting Protocol Boards**
 
    ![install boards in Board Manager](images/install-boards.png)
-1. For some of the boards you must install additional definitions: Arduino SAMD Boards (32-bits ARM Cortex-M0+), [SparkFun Boards](https://github.com/sparkfun/Arduino_Boards#installation-instructions), [Adafruit Boards](https://learn.adafruit.com/add-boards-arduino-v164/setup), [Hoodloader2 Boards](https://github.com/NicoHood/HoodLoader2/wiki/Software-Installation#2-installing-board-definitions).
+1. For some of the boards you must install additional definitions: [SparkFun Boards](https://github.com/sparkfun/Arduino_Boards#installation-instructions), [Hoodloader2 Boards](https://github.com/NicoHood/HoodLoader2/wiki/Software-Installation#2-installing-board-definitions).
    Make sure you add the additional board urls each on a new line and don't remove the already existing ones.
 
    ![all additional boards urls](images/additional-boards-urls.png)
@@ -45,13 +45,11 @@ The following is only an example on how to use the boards, it's not required for
 1. Compile/Upload as usual
 
 ## Supported Hardware Boards
-| Hardware Board(s)              | Instructions                                                                                                      |
-|--------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Arduino Leonardo               | installed by default                                                                                              |
-| Arduino Zero (Native USB Port) | install Arduino SAMD Boards (32-bits ARM Cortex-M0+)                                                              |
-| SparkFun Pro Micro             | install [SparkFun Boards](https://github.com/sparkfun/Arduino_Boards#installation-instructions)                   |
-| Adafruit 32u4 AVR Boards       | install [Adafruit AVR Boards](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/arduino-ide-setup)     |
-| Adafruit Trinket M0            | install [Adafruit SAMD Boards](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/using-with-arduino-ide) |
+| Hardware Board(s)              | Instructions                                                                                                  |
+|--------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Arduino Leonardo               | installed by default                                                                                          |
+| SparkFun Pro Micro             | install [SparkFun Boards](https://github.com/sparkfun/Arduino_Boards#installation-instructions)               |
+| Adafruit 32u4 AVR Boards       | install [Adafruit AVR Boards](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/arduino-ide-setup) |
 
 ## How to release a new version (development)
 
