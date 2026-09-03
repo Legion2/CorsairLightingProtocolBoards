@@ -4,8 +4,8 @@ These board definitions have modified USB settings so they can be used to simula
 
 ## Install CLP Boards in Arduino
 All boards can simply be installed in Arduino IDE via the Boards Manager.
-When using 3rd party boards such as SparkFun you must install them additionally.
-See [Supported Hardware Boards](#supported-hardware-boards) down below for more details.
+The package is self-contained since version 0.4.0: the pin definitions of the SparkFun, Adafruit and HoodLoader2 boards are bundled, so no other third party board package is needed.
+Version 0.4.0 also works with Arduino IDE 2 and arduino-cli 0.19 or newer, which rejected the Pro Micro, HoodLoader2 and Adafruit entries of older versions with `'build.core' and 'build.variant' refer to different platforms`.
 
 package index URL:
 ```
@@ -24,10 +24,7 @@ https://raw.githubusercontent.com/Legion2/CorsairLightingProtocolBoards/master/p
 1. Search and install **Corsair Lighting Protocol Boards**
 
    ![install boards in Board Manager](images/install-boards.png)
-1. For some of the boards you must install additional definitions: [SparkFun Boards](https://github.com/sparkfun/Arduino_Boards#installation-instructions), [Hoodloader2 Boards](https://github.com/NicoHood/HoodLoader2/wiki/Software-Installation#2-installing-board-definitions).
-   Make sure you add the additional board urls each on a new line and don't remove the already existing ones.
-
-   ![all additional boards urls](images/additional-boards-urls.png)
+1. Only if you want to flash the HoodLoader2 bootloader itself onto a 16u2 you still need the [Hoodloader2 Boards](https://github.com/NicoHood/HoodLoader2/wiki/Software-Installation#2-installing-board-definitions); compiling and uploading sketches works without them.
 
 ## How to use these boards in Arduino
 The CLP Boards can now be used in Arduino IDE.
@@ -45,11 +42,12 @@ The following is only an example on how to use the boards, it's not required for
 1. Compile/Upload as usual
 
 ## Supported Hardware Boards
-| Hardware Board(s)              | Instructions                                                                                                  |
-|--------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Arduino Leonardo               | installed by default                                                                                          |
-| SparkFun Pro Micro             | install [SparkFun Boards](https://github.com/sparkfun/Arduino_Boards#installation-instructions)               |
-| Adafruit 32u4 AVR Boards       | install [Adafruit AVR Boards](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/arduino-ide-setup) |
+| Hardware Board(s)              | Instructions                                                        |
+|--------------------------------|---------------------------------------------------------------------|
+| Arduino Leonardo, Arduino Micro| installed by default                                                |
+| SparkFun Pro Micro 5V and 3.3V | installed by default (pin definitions bundled since 0.4.0)          |
+| Adafruit 32u4 AVR Boards       | installed by default (pin definitions bundled since 0.4.0)          |
+| HoodLoader2 16u2 (Uno/Mega)    | installed by default; the bootloader itself comes from HoodLoader2  |
 
 ## How to release a new version (development)
 

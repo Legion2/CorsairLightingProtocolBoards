@@ -19,7 +19,12 @@ const nameRegex = /^name=(.*)/m;
 const versionRegex = /^version=(.*)/m;
 
 const name = platformDefinition.match(nameRegex)[1];
-console.log(`::set-output name=platform::${name}`);
+// GitHub Actions output (set-output is deprecated); print as fallback when run locally
+if (process.env.GITHUB_OUTPUT) {
+  fs.appendFileSync(process.env.GITHUB_OUTPUT, `platform=${name}\n`);
+} else {
+  console.log(`platform=${name}`);
+}
 
 const newPlatformDefinition = platformDefinition.replace(
   versionRegex,

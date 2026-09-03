@@ -16,6 +16,10 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    # The workflow pushes the version bump and creates a release; the default
+    # GITHUB_TOKEN of new repositories is read-only.
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v6
       - name: Update version in files
@@ -23,10 +27,10 @@ jobs:
         run: ./scripts/update-version.mjs ${{ github.event.inputs.platform-dir }} ${{ github.event.inputs.version }}
       - name: Generate Tag name
         id: tag-name
-        run: echo ::set-output name=tag::${{ github.event.inputs.platform-dir }}-${{ github.event.inputs.version }}
+        run: echo "tag=${{ github.event.inputs.platform-dir }}-${{ github.event.inputs.version }}" >> "$GITHUB_OUTPUT"
       - name: Generate Archive name
         id: archive-name
-        run: echo ::set-output name=filename::CorsairLightingProtocolBoards-${{ steps.tag-name.outputs.tag }}.zip
+        run: echo "filename=CorsairLightingProtocolBoards-${{ steps.tag-name.outputs.tag }}.zip" >> "$GITHUB_OUTPUT"
       - name: Push updated files
         run: |
           git config user.name github-actions[bot]
@@ -50,8 +54,8 @@ jobs:
       - name: Calculate hash and size
         id: metadata
         run: |
-          echo ::set-output name=hash::SHA-256:$(sha256sum ${{ steps.archive-name.outputs.filename }} | cut -f1 -d ' ')
-          echo ::set-output name=size::$(stat -c%s ${{ steps.archive-name.outputs.filename }})
+          echo "hash=SHA-256:$(sha256sum ${{ steps.archive-name.outputs.filename }} | cut -f1 -d ' ')" >> "$GITHUB_OUTPUT"
+          echo "size=$(stat -c%s ${{ steps.archive-name.outputs.filename }})" >> "$GITHUB_OUTPUT"
       - name: Print package metadata
         uses: actions/github-script@v7
         with:
